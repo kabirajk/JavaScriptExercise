@@ -1,5 +1,5 @@
 
-let infoContainers=document.querySelectorAll('.info-container')
+let infoContainers=document.querySelectorAll('.info-container');
 function showDetail(eventObj,nodeObj){
     let mouseButton = ['LMB','MMV','RMB'];
     const areaObj=nodeObj.querySelectorAll('.areaxy')
@@ -19,7 +19,7 @@ infoContainers.forEach((value,key,nodeObj)=>{
     value.children[2].addEventListener('click',(eventObj,nodeObj=value.children[1])=>{
         console.log(eventObj);
         let mouseButton = ['LMB','MMV','RMB'];
-    const areaObj=(eventObj.target.previousElementSibling).children[3]
+    const areaObj=(eventObj.target.previousElementSibling).children[3];
 
     areaObj.innerHTML=`X/Y:${eventObj.clientX} / ${eventObj.clientY} <br><br> Mouse button:${mouseButton[eventObj.button]}`;
     

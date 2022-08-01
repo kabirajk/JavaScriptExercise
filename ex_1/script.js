@@ -26,8 +26,8 @@ browserNameVersion=browserNameVersion.split('/');
 function change_res(){
     document.getElementById('Browser').textContent=browserNameVersion[0];
     document.getElementById('Version').textContent=browserNameVersion[1];
-    document.getElementById('Width').textContent=screen.width
-    document.getElementById('Height').textContent=screen.height
+    document.getElementById('Width').textContent=screen.width;
+    document.getElementById('Height').textContent=screen.height;
 
 }
-change_res()
+change_res();

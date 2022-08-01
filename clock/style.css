@@ -1,0 +1,21 @@
+.outer-circle,.inner-circle{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner-circle{
+    background-color: aliceblue;
+    width: 480px;
+    height: 480px;
+}
+.hrs-hand{
+    width:220px;
+    height: 10px;
+    background-color: black;
+    transform: translateX(-50%);
+}

@@ -41,7 +41,7 @@ function validateName(){
     const pattern=/^[a-z A-Z]+$/;
     if (!(pattern.test(name))){
         alertText("Enter name aplhabets only","Name");
-         return
+         return;
     }
     reset("Name");
 

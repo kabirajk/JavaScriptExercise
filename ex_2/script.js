@@ -8,10 +8,10 @@ function setCookie(){
     let str=document.cookie.split(";");
         for (let i in str){
                 const curString=str[i].split("=");
-                cookieObj.set(curString[0],parseInt(curString[1]))
+                cookieObj.set(curString[0],parseInt(curString[1]));
         }
 
-        cookieObj.set('visited',cookieObj.get('visited')+1)
+        cookieObj.set('visited',cookieObj.get('visited')+1);
         console.log(cookieObj.get('visited'));
     document.cookie="visited = "+cookieObj.get('visited')+"; SameSite = None";
 
@@ -24,7 +24,7 @@ function view_count(){
 
 function resetCookieData(){
         if (document.cookie.length!=0){
-                cookieObj.set('visited',1)
+                cookieObj.set('visited',1);
                 document.cookie="visited=1; SameSite=None";
                 count=1;
                } 

@@ -10,7 +10,7 @@ function getNumber(){
     
 }
 var pieceContainer=document.querySelector('.pices-container');
-var puzzleContainer=document.querySelector('#puzzle-container')
+var puzzleContainer=document.querySelector('#puzzle-container');
 puzzleContainer.style.width=`${600+n+1}px`;
 puzzleContainer.style.height=`${600+n+1}px`;
 
@@ -78,12 +78,12 @@ function drawTiles(){
     var row=0;
     for(let i=0;i<(n*n);i++){
     var ctx=Tiles[i].getContext('2d');
-        ctx.drawImage(img,(i%n)*(600/n),(row%n)*(600/n),600/n,600/n,0,0,600/n,600/n)
+        ctx.drawImage(img,(i%n)*(600/n),(row%n)*(600/n),600/n,600/n,0,0,600/n,600/n);
         if(i%n==0){
          row++;   
         }
 }
 }
-init()
+init();
 
 
