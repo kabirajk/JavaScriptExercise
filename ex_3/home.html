@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="alertbox" id="alertbox_Name"><p><strong>! Warning: </strong>!</p></div>
+    <div class="alertbox" id="alertbox_Date"><p><strong>! Warning: </strong>!</p></div>
+    <div class="alertbox" id="alertbox_Phone"><p><strong>! Warning: </strong>!</p></div>
+    <div class="outer">
+        <form action="">
+            <input type="text" id="name" placeholder="Name [alphabets only]" onfocusout="validateName()"></input>
+            <input id="DOB" type="text" placeholder="Date:[DD-MM-YYYY]" onfocusout="validateDate()" ></input>
+                <label for="Gender" id="sex-radio">Sex</label>
+                <select name="Sex" id="Gender" class="sex-select">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            <input id="number" type="text" placeholder="Phone Number" onfocusout="validateNumber()" ></input>
+            <input id="submit" type="submit" value=" validate"></input>
+        </form>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

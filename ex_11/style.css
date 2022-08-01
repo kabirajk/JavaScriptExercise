@@ -1,0 +1,51 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+input{
+    position: absolute;
+    top: 0;
+    margin: 5px;
+    border: 1px solid lightcyan;
+    padding: 2px;
+}
+input[type='button']{
+    top: 40px;
+    background-color: azure;
+}
+
+#puzzle-container{
+    width:610px;
+    height:610px;
+    background-color: aliceblue;
+    border: 1px solid lightslategray;
+}
+.box{
+    position: relative;
+    border: 0.1px solid lightslategrey;
+    /* width: 200px; */
+    /* height: 200px; */
+    float: left;
+    object-fit: fill;
+}
+#puzzle-container.box{
+    border:0px;
+}
+
+.pices-container{
+    width: 300px;
+    height: 300px;
+    /* position: absolute; */
+    border: 1px solid black;
+    top:17%;
+    left: 55%;
+    background-color: white;
+}
+
+.pices-container .box{
+    position: absolute;
+}

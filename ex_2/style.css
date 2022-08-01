@@ -1,0 +1,36 @@
+body{
+    background-color: paleturquoise;
+}
+#number{
+    text-align: center;
+    font-size:2000%;
+    
+    font-style: bold;
+}
+.text{
+    font-size: 300%;
+    font-style: bold;  
+    text-align: center;
+}
+#btn{
+    margin: 0%;
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: black;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 5%;
+    position: relative;
+    margin-left: 45%;
+    font-size: 100%;
+}
+.btn1{
+    left: -10%;
+}
+.btn2{
+    margin-top: 200%;
+    position: relative;
+    top: -69px;;
+    right: -10%;
+}
