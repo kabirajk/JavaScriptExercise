@@ -41,16 +41,17 @@ function createPuzzleBlocks(){
     puzzleContainer.appendChild(divObject);
 }
 function init(){
-for(let i=0;i<(n*n);i++){
-    createPices(i+1);
-    createPuzzleBlocks();
-}
-drawTiles();
+    for(let i=0;i<(n*n);i++){
+        createPices(i+1);
+        createPuzzleBlocks();
+    }
+    drawTiles();
 }
 var Tiles = document.querySelectorAll('.canv');
 
-var img = new Image();
 
+var img = new Image();
+var currentDrag;
 img.src = 'img0.jpg';
 img.addEventListener('load', drawTiles, false);
 
@@ -59,18 +60,32 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("pices-container", ev.target.id);
+    ev.dataTransfer.setData("text", ev.target.id);
+    currentDrag=ev;
+    console.log(currentDrag)
 }
 
 
 function drop(ev) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("pices-container");
+    var data = ev.dataTransfer.getData("text");
+    console.log(ev.target,currentDrag);
     if(ev.target.classList.contains('canv')){
+        const dropCanvas = (ev.target.parentElement).id
+        const dargCanvas = currentDrag.target.id;
+        const node1=document.getElementById(dargCanvas);
+        const node2=document.getElementById(dropCanvas);
+        node1.appendChild(node2.children[0])
+        node1.id=dropCanvas
+        node2.appendChild(node1.children[0])
+        node2.id=dargCanvas
+        console.log(dropCanvas,dargCanvas);
+
        return;
     }
     else{
-    ev.target.appendChild(document.getElementById(data));}
+    ev.target.appendChild(document.getElementById(data));
+    }
 }
 
 function drawTiles(){
@@ -78,7 +93,7 @@ function drawTiles(){
     var row=0;
     for(let i=0;i<(n*n);i++){
     var ctx=Tiles[i].getContext('2d');
-        ctx.drawImage(img,(i%n)*(600/n),(row%n)*(600/n),600/n,600/n,0,0,600/n,600/n);
+        ctx.drawImage(img,(row%n)*(600/n),(i%n)*(600/n),600/n,600/n,0,0,600/n,600/n);
         if(i%n==0){
          row++;   
         }

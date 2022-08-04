@@ -3,6 +3,7 @@ var cookieObj=new Map();
 function setCookie(){
    if (document.cookie.length==0){
     document.cookie="visited = 1; SameSite = None";
+    cookieObj.set('visited',1);
    }
    else{
     let str=document.cookie.split(";");
