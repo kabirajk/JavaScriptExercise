@@ -97,7 +97,6 @@ function drawTiles(){
         row++;   
        }   
     ctx.drawImage(img,(row%n)*(600/n),(i%n)*(600/n),600/n,600/n,0,0,600/n,600/n);
-        console.log(Tiles[i]);
 }
 }
 
