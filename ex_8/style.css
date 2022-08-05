@@ -1,13 +1,13 @@
 body{
     width:100%;
     height: 100%;
-    background-color: #405d27;
+    background-color: lightslategrey;
 }
 .input-box,button{
     position: relative;
     padding: 10px;
     width: 100px;
-    border: 2px solid lawngreen;
+    border: 2px solid lightskyblue;
 }
 
 button{
@@ -32,6 +32,19 @@ img{
     background:url(social-icons.jpeg);
     /* background-position: calc(-220px * 4) calc(-209px * 2); */
     border: 10px solid white;
+}
+.tooltip{
+    position: absolute;
+    width: 100px;
+    padding: 5px;
+    color:white;
+    text-align: center;
+    background-color: black;
+    transform: translate(200px,50px);
+    visibility: hidden;
+}
+.tooltip.vis{
+visibility:visible;
 }
 
 

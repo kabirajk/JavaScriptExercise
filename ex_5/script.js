@@ -69,13 +69,15 @@ function nextSlide(){
 }
 
 init();
-document.addEventListener('click',(Mevent)=>{
+document.querySelector('.slideshow-container'). addEventListener('click',(Mevent)=>{
+
+    Mevent.preventDefault();
     if(Mevent.button==0){
     nextSlide();}
-    if(Mevent.button==2){
-        prevSlide();
-    }
 });
+window.oncontextmenu=(event)=>{
+    event.preventDefault();
+    prevSlide();}
 window.addEventListener('keydown', (event) => {
     if(event.code=="ArrowUp"||event.code=="PageUp"||event.code=="ArrowRight"){
         nextSlide();
