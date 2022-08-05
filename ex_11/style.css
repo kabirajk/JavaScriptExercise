@@ -25,15 +25,26 @@ input[type='button']{
     border: 1px solid lightslategray;
 }
 .box{
+    /* display: inline-block; */
     position: relative;
     border: 0.1px solid lightslategrey;
     /* width: 200px; */
     /* height: 200px; */
     float: left;
-    object-fit: fill;
+    /* object-fit: fill; */
 }
 #puzzle-container.box{
     border:0px;
+}
+
+#check{
+    top:80px;
+}
+#check.win{
+background-color:lightgreen;
+}
+#check.lose{
+    background-color:lightcoral;
 }
 
 .pices-container{

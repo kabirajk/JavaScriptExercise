@@ -93,12 +93,26 @@ function drawTiles(){
     var row=0;
     for(let i=0;i<(n*n);i++){
     var ctx=Tiles[i].getContext('2d');
-        ctx.drawImage(img,(row%n)*(600/n),(i%n)*(600/n),600/n,600/n,0,0,600/n,600/n);
-        if(i%n==0){
-         row++;   
+    if(i%n==0 && i!=0){
+        row++;   
+       }   
+    ctx.drawImage(img,(row%n)*(600/n),(i%n)*(600/n),600/n,600/n,0,0,600/n,600/n);
+        console.log(Tiles[i]);
+}
+}
+
+function checkTiles(event){
+    const conatiner=document.querySelector('.box');
+    for(let index =1;index<=conatiner.children.length;index++){
+        if (!(conatiner.children[0]).id.endsWith(`${index}`)){
+            event.target.classList.add('lose')
+            return
         }
+        event.target.classList.remove('lose')
+        event.target.classList.add('win')
+    }
 }
-}
+
 init();
 
 
