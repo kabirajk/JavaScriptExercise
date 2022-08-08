@@ -2,9 +2,9 @@ body{
     height: 100%;
     width: 100%;
     background-color: lightblue;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-items: center;
+    justify-items: center; */
 }
 input{
     position: absolute;
@@ -19,6 +19,10 @@ input[type='button']{
 }
 
 #puzzle-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     width:610px;
     height:610px;
     background-color: aliceblue;
@@ -35,6 +39,7 @@ input[type='button']{
 }
 #puzzle-container.box{
     border:0px;
+    
 }
 
 #check{
@@ -48,12 +53,14 @@ background-color:lightgreen;
 }
 
 .pices-container{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
     width: 300px;
     height: 300px;
     /* position: absolute; */
     border: 1px solid black;
-    top:17%;
-    left: 55%;
     background-color: white;
 }
 
